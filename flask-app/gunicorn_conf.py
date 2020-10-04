@@ -18,9 +18,9 @@ accesslog = "-"
 bind = '0.0.0.0:5000'
 # workers = 3
 workers = multiprocessing.cpu_count() * 2 + 1
-max_payload_in_mb = 15
+max_payload_in_mb = 15 * 1024 * 1024
 
 timeout = 3 * 60  # 3 minutes
 keepalive = 24 * 60 * 60  # 1 day
-
+max_process_pool = 10
 capture_output = True
